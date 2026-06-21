@@ -12,6 +12,7 @@
  * 注意: devicetreeのレイヤーブロック名（MOUSE、NUM_US等）と文字列が衝突しないよう、
  * マクロ名にはLY_プレフィックスを付けている。
  */
+
 #define LY_DEF      0
 #define LY_US_D     1
 #define LY_ARR      2
@@ -37,13 +38,13 @@
 };
 
 /* Araiさんのオートマウスレイヤー方式: sticky layerが解除されるまでの猶予 (roBaより移植) */
-&sl { release-after-ms = <250>; };
 
 / {
     combos {
         compatible = "zmk,combos";
 
         /* --- moNa2既存のコンボ（現状維持。参照先レイヤー番号のみ移動に追従） --- */
+
         Gesture_L8 {
             bindings = <&lt LY_GEST_L8 LA(TAB)>;
             key-positions = <8 9>;
@@ -60,30 +61,6 @@
         };
 
         /* --- roBaから移植したコンボ --- */
-        combo_esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <0 1>;
-        };
-
-        combo_click {
-            bindings = <&mkp MB1>;
-            key-positions = <13 14>;
-        };
-
-        combo_minus {
-            bindings = <&kp MINUS>;
-            key-positions = <31 32>;
-        };
-
-        combo_alttab {
-            bindings = <&kp LA(TAB)>;
-            key-positions = <11 12>;
-        };
-
-        combo_del {
-            bindings = <&kp DELETE>;
-            key-positions = <7 8>;
-        };
     };
 
     macros {
@@ -95,6 +72,7 @@
         };
 
         /* --- moNa2既存のオートマウス関連マクロ（現状維持） --- */
+
         mul_mark: x_sign_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -143,89 +121,6 @@
         };
 
         /* --- roBaから移植したマクロ --- */
-        to_layer_0_mkp: to_layer_0_mkp {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &mkp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0_MKP";
-        };
-
-        mkp_exit_AML: mkp_exit_AML {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_press>,
-                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
-                <&macro_tap>,
-                <&sl LY_MOUSE>;
-            label = "MKP_EXIT_AML";
-        };
-
-        macro_s: macro_s {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <30>;
-            bindings = <&kp H &kp O &kp N &kp N &kp A &kp D &kp A &kp I>;
-            label = "MACRO_S";
-        };
-
-        macro_d: macro_d {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <30>;
-            tap-ms = <30>;
-            bindings = <&kp LS(A) &kp N2 &kp N9 &kp N5 &kp X &kp P>;
-            label = "MACRO_D";
-        };
-
-        bt0_jis: bt0_jis {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&bt BT_SEL 0 &to 0>;
-            label = "BT0_JIS";
-        };
-
-        bt1_us: bt1_us {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&bt BT_SEL 1 &to 1>;
-            label = "BT1_US";
-        };
-
-        bt2_us: bt2_us {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&bt BT_SEL 2 &to 1>;
-            label = "BT2_US";
-        };
-
-        bt3_us: bt3_us {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&bt BT_SEL 3 &to 1>;
-            label = "BT3_US";
-        };
-
-        bt4_us: bt4_us {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&bt BT_SEL 4 &to 1>;
-            label = "BT4_US";
-        };
     };
 
     behaviors {
@@ -238,6 +133,7 @@
         };
 
         /* --- moNa2既存のオートマウス関連behavior（現状維持） --- */
+
         scroll_up_down: mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
@@ -271,82 +167,83 @@
         };
 
         /* --- roBaから移植したbehavior --- */
-        page_encoder: page_encoder {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp LC(PAGE_DOWN)>, <&kp LC(PAGE_UP)>;
-        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
         /* [0] DEFAULT (JIS OS 用) roBaより移植 */
+
         default_layer {
             bindings = <
-&kp Q                        &kp W         &kp E         &kp R             &kp T                                                  &kp Y          &kp U     &kp I       &kp O    &kp P
-&kp A                        &kp S         &kp D         &kp F             &kp G                &kp DELETE      &kp H          &kp J     &lt LY_SCR K  &kp L    &mt RIGHT_CONTROL MINUS
-&mt LSHIFT Z                 &kp X         &kp C         &kp V             &kp B                &mkp MB2          &lt LY_SYS ESCAPE  &kp N          &kp M     &lt LY_MOUSE COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt LEFT_CONTROL LANGUAGE_2  &kp LEFT_ALT  &kp LEFT_WIN  &lt LY_JIS_M TAB  &lt LY_NUM SPACE     &mkp MB1          &kp BACKSPACE   &lt LY_ARR ENTER                          &mt RIGHT_ALT LANGUAGE_1
+&kp Q                        &kp W         &kp E         &kp R             &kp T                                            &kp Y             &kp U  &kp I               &kp O    &kp P
+&kp A                        &kp S         &kp D         &kp F             &kp G                         &kp DELETE         &kp H             &kp J  &lt LY_SCR K        &kp L    &mt RIGHT_CONTROL MINUS
+&mt LSHIFT Z                 &kp X         &kp C         &kp V             &kp B             &mkp MB2    &lt LY_SYS ESCAPE  &kp N             &kp M  &lt LY_MOUSE COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt LEFT_CONTROL LANGUAGE_2  &kp LEFT_ALT  &kp LEFT_WIN  &lt LY_JIS_M TAB  &lt LY_NUM SPACE  &mkp MB1    &kp BACKSPACE      &lt LY_ARR ENTER                                      &mt RIGHT_ALT LANGUAGE_1
             >;
 
             sensor-bindings = <&scroll_up_down>;
         };
 
         /* [1] US_DEFO roBaより移植 */
+
         us_defo {
             bindings = <
-&kp Q                        &kp W         &kp E         &kp R             &kp T                                                  &kp Y          &kp U     &kp I       &kp O    &kp P
-&kp A                        &kp S         &kp D         &kp F             &kp G                &kp DELETE      &kp H          &kp J     &lt LY_SCR K  &kp L    &mt RIGHT_CONTROL MINUS
-&mt LSHIFT Z                 &kp X         &kp C         &kp V             &kp B                &mkp MB2          &lt LY_SYS ESCAPE  &kp N          &kp M     &lt LY_MOUSE COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt LEFT_CONTROL LANGUAGE_2  &kp LEFT_ALT  &kp LEFT_WIN  &lt LY_US_M TAB   &lt LY_NUM_US SPACE  &mkp MB1          &kp BACKSPACE   &lt LY_ARR ENTER                          &mt RIGHT_ALT LANGUAGE_1
+&kp Q                        &kp W         &kp E         &kp R            &kp T                                               &kp Y             &kp U  &kp I               &kp O    &kp P
+&kp A                        &kp S         &kp D         &kp F            &kp G                            &kp DELETE         &kp H             &kp J  &lt LY_SCR K        &kp L    &mt RIGHT_CONTROL MINUS
+&mt LSHIFT Z                 &kp X         &kp C         &kp V            &kp B                &mkp MB2    &lt LY_SYS ESCAPE  &kp N             &kp M  &lt LY_MOUSE COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt LEFT_CONTROL LANGUAGE_2  &kp LEFT_ALT  &kp LEFT_WIN  &lt LY_US_M TAB  &lt LY_NUM_US SPACE  &mkp MB1    &kp BACKSPACE      &lt LY_ARR ENTER                                      &mt RIGHT_ALT LANGUAGE_1
             >;
 
             sensor-bindings = <&scroll_up_down>;
         };
 
         /* [2] ARROW roBaより移植 */
+
         ARROW {
             bindings = <
-&trans  &kp F2  &trans  &kp F4  &trans                       &kp RS(RG(LEFT))  &kp F2    &kp UP    &kp F4     &kp RS(RG(RIGHT))
-&trans  &trans  &trans  &trans  &trans      &kp F13  &kp RA(LEFT)      &kp LEFT  &kp DOWN  &kp RIGHT  &trans
-&trans  &kp F7  &kp F8  &trans  &trans  &trans      &trans   &trans            &kp F7    &trans    &kp F8     &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans   &trans                                           &kp F12
+&trans  &kp F2  &trans  &kp F4  &trans                     &kp RS(RG(LEFT))  &kp F2    &kp UP    &kp F4     &kp RS(RG(RIGHT))
+&trans  &trans  &trans  &trans  &trans            &kp F13  &kp RA(LEFT)      &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+&trans  &kp F7  &kp F8  &trans  &trans  &trans    &trans   &trans            &kp F7    &trans    &kp F8     &kp F11
+&trans  &trans  &trans  &trans  &trans  &trans    &trans   &trans                                           &kp F12
             >;
 
             sensor-bindings = <&scroll_up_down>;
         };
 
         /* [3] NUM_JIS roBaより移植（トラックボールのスクロールレイヤーはこのレイヤー番号のまま現状維持） */
+
         NUM_JIS {
             bindings = <
-&kp PAGE_UP   &kp F2    &kp UP_ARROW  &kp F4        &kp MINUS                         &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
-&mkp MB3      &mkp MB2  &mo LY_SCR         &mkp MB1      &kp LS(SEMI)      &trans  &kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp COLON
-&kp NUMBER_0  &kp F7    &kp F8        &kp F11       &trans        &trans      &trans  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0
-&trans        &trans    &trans        &kp NUMBER_0  &trans        &trans      &trans  &kp NUMBER_0                                            &trans
+&kp PAGE_UP   &kp F2    &kp UP_ARROW  &kp F4        &kp MINUS                       &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
+&mkp MB3      &mkp MB2  &mo LY_SCR    &mkp MB1      &kp LS(SEMI)            &trans  &kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp COLON
+&kp NUMBER_0  &kp F7    &kp F8        &kp F11       &trans        &trans    &trans  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0
+&trans        &trans    &trans        &kp NUMBER_0  &trans        &trans    &trans  &kp NUMBER_0                                            &trans
             >;
 
             sensor-bindings = <&page_encoder>;
         };
 
         /* [4] NUM_US roBaより移植 */
+
         NUM_US {
             bindings = <
-&kp PAGE_UP   &kp F2    &kp UP_ARROW  &kp F4        &kp MINUS                         &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
-&mkp MB3      &mkp MB2  &mo LY_SCR         &mkp MB1      &kp LS(SEMI)      &trans  &kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
-&kp NUMBER_0  &kp F7    &kp F8        &kp F11       &trans        &trans      &trans  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0
-&trans        &trans    &trans        &kp NUMBER_0  &trans        &trans      &trans  &kp NUMBER_0                                            &trans
+&kp PAGE_UP   &kp F2    &kp UP_ARROW  &kp F4        &kp MINUS                       &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
+&mkp MB3      &mkp MB2  &mo LY_SCR    &mkp MB1      &kp LS(SEMI)            &trans  &kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
+&kp NUMBER_0  &kp F7    &kp F8        &kp F11       &trans        &trans    &trans  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0
+&trans        &trans    &trans        &kp NUMBER_0  &trans        &trans    &trans  &kp NUMBER_0                                            &trans
             >;
 
             sensor-bindings = <&page_encoder>;
         };
 
         /* [5] MOUSE moNa2既存の内容のまま現状維持（オートマウスレイヤーは修正しない） */
+
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans    &trans
 &trans  &trans  &trans  &trans  &trans            &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB4  &trans    &mkp MB5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &mkp MB4  &mkp MB5  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                &trans
             >;
 
@@ -354,73 +251,51 @@
         };
 
         /* [6] SCROLL roBaより移植 */
+
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
             >;
         };
 
         /* [7] SYSTEM roBaより移植 */
+
         SYSTEM {
             bindings = <
-&bt0_jis    &bt1_us         &bt2_us   &bt3_us   &bt4_us                                  &trans  &trans  &trans  &trans  &trans
-&trans      &macro_s        &macro_d  &macro_s  &trans       &trans       &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR  &bt BT_CLR_ALL  &kp N2    &kp N3    &trans   &trans      &bootloader  &trans  &trans  &trans  &trans  &trans
-&trans      &trans          &trans    &trans    &trans   &trans      &trans       &trans                          &trans
+&bt0_jis    &bt1_us         &bt2_us   &bt3_us   &bt4_us                         &trans  &trans  &trans  &trans  &trans
+&trans      &macro_s        &macro_d  &macro_s  &trans             &trans       &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR  &bt BT_CLR_ALL  &kp N2    &kp N3    &trans   &trans    &bootloader  &trans  &trans  &trans  &trans  &trans
+&trans      &trans          &trans    &trans    &trans   &trans    &trans       &trans                          &trans
             >;
         };
 
         /* [8] US_MAP roBaより移植 */
+
         US_MAP {
             bindings = <
-&kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                      &kp LCTRL  &kp AMPS     &kp LPAR  &kp RPAR  &kp EQUAL
-&trans    &trans  &trans    &trans    &trans         &trans  &kp TILDE  &kp RS(SQT)  &kp LBKT  &kp RBKT  &kp MINUS
-&trans    &trans  &trans    &trans    &trans     &trans      &trans  &kp DQT    &kp DQT      &kp LT    &kp GT    &kp QUESTION
-&trans    &trans  &trans    &trans    &trans     &trans      &trans  &trans                                      &trans
+&kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                    &kp LCTRL  &kp AMPS     &kp LPAR  &kp RPAR  &kp EQUAL
+&trans    &trans  &trans    &trans    &trans               &trans  &kp TILDE  &kp RS(SQT)  &kp LBKT  &kp RBKT  &kp MINUS
+&trans    &trans  &trans    &trans    &trans     &trans    &trans  &kp DQT    &kp DQT      &kp LT    &kp GT    &kp QUESTION
+&trans    &trans  &trans    &trans    &trans     &trans    &trans  &trans                                      &trans
             >;
         };
 
         /* [9] JIS_MAP roBaより移植 */
+
         JIS_MAP {
             bindings = <
-&kp EXCL  &kp LBKT  &kp HASH  &kp DLLR  &kp PRCNT                      &kp UNDERSCORE  &kp SQT   &kp STAR  &kp LPAR  &kp RS(MINUS)
-&kp ESC   &trans    &macro_s  &macro_d  &macro_s       &trans  &kp AMPS        &kp SQT   &kp RBKT  &kp BSLH  &kp RS(INT1)
-&trans    &trans    &trans    &trans    &macro_d   &trans      &trans  &kp AT          &kp PLUS  &kp PLUS  &kp SQT   &kp RS(QUESTION)
-&trans    &trans    &trans    &trans    &trans     &trans      &trans  &trans                                        &trans
+&kp EXCL  &kp LBKT  &kp HASH  &kp DLLR  &kp PRCNT                    &kp UNDERSCORE  &kp SQT   &kp STAR  &kp LPAR  &kp RS(MINUS)
+&kp ESC   &trans    &macro_s  &macro_d  &macro_s             &trans  &kp AMPS        &kp SQT   &kp RBKT  &kp BSLH  &kp RS(INT1)
+&trans    &trans    &trans    &trans    &macro_d   &trans    &trans  &kp AT          &kp PLUS  &kp PLUS  &kp SQT   &kp RS(QUESTION)
+&trans    &trans    &trans    &trans    &trans     &trans    &trans  &trans                                        &trans
             >;
         };
 
         /* [10] Gesture_L7 moNa2既存（トラボジェスチャー：タブ操作）。番号のみ7→10へ移動、中身は現状維持 */
-        Gesture_L7 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
-            >;
-        };
-
         /* [11] Gesture_L8 moNa2既存（トラボジェスチャー：仮想デスクトップ操作）。番号のみ8→11へ移動、中身は現状維持 */
-        Gesture_L8 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
-            >;
-        };
-
         /* [12] Gesture_L9 moNa2既存（トラボジェスチャー：URL/タスクバー操作）。番号のみ9→12へ移動、中身は現状維持 */
-        Gesture_L9 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
-            >;
-        };
     };
 };
