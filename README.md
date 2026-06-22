@@ -1,3 +1,9 @@
+# zmk-config-moNa2-v2
+
+<img src="keymap-drawer/mona2.svg" >
+
+---
+
 COROPITを使用する方は以下のようにコードを編集してください。
 
 mona2_r.overlay
