@@ -10,7 +10,7 @@ layers:
   - U
   - I
   - O
-  - P
+  - {t: P, h: SCROLL}
   - A
   - S
   - D
@@ -19,7 +19,7 @@ layers:
   - DELETE
   - H
   - J
-  - {t: K, h: SCROLL}
+  - K
   - L
   - {t: '-', h: RIGHT CONTROL}
   - {t: Z, h: LSHIFT}
@@ -53,7 +53,7 @@ layers:
   - U
   - I
   - O
-  - P
+  - {t: P, h: SCROLL}
   - A
   - S
   - D
@@ -62,7 +62,7 @@ layers:
   - DELETE
   - H
   - J
-  - {t: K, h: SCROLL}
+  - K
   - L
   - {t: '-', h: RIGHT CONTROL}
   - {t: Z, h: LSHIFT}
@@ -268,16 +268,16 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
