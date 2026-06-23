@@ -281,11 +281,14 @@
             bindings = <&kp LC(PAGE_DOWN)>, <&kp LC(PAGE_UP)>;
         };
 
-        bt3_shift: bt3_shift {
-            compatible = "zmk,behavior-mod-morph";
+        fusion_orbit: fusion_orbit {
+            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&trans>, <&bt3_us>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            bindings
+                = <&macro_press &kp LSHIFT &mkp MB3>
+                , <&macro_pause_for_release>
+                , <&macro_release &kp LSHIFT &mkp MB3>;
+            label = "FUSION_ORBIT";
         };
     };
 
@@ -363,7 +366,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans     &trans     &trans
 &trans  &trans  &trans  &trans  &trans            &trans  &trans  &mkp MB4  &mkp MB3   &mkp MB2   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &kp RC(C)  &kp RC(V)  &bt3_shift
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &kp RC(C)  &kp RC(V)  &fusion_orbit
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                  &trans
             >;
 
