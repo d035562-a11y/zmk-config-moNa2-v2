@@ -280,6 +280,13 @@
             #sensor-binding-cells = <0>;
             bindings = <&kp LC(PAGE_DOWN)>, <&kp LC(PAGE_UP)>;
         };
+
+        bt3_shift: bt3_shift {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&trans>, <&bt3_us>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -356,7 +363,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans     &trans     &trans
 &trans  &trans  &trans  &trans  &trans            &trans  &trans  &mkp MB4  &mkp MB3   &mkp MB2   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &kp RC(C)  &kp RC(V)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &kp RC(C)  &kp RC(V)  &bt3_shift
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                  &trans
             >;
 
