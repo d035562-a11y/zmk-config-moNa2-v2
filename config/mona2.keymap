@@ -290,7 +290,7 @@
         default_layer {
             bindings = <
 &kp Q                        &kp W         &kp E         &kp R                 &kp T                                                      &kp Y        &kp U  &lt 6 I    &kp O    &lt 6 P
-&kp A                        &kp S         &kp D         &kp F                 &kp G                                       &lt 7 ESC      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL MINUS
+&kp A                        &kp S         &kp D         &kp F                 &kp G                                       &lt 7 ESC      &kp H        &kp J  &kp K      &kp L    &lt 2 MINUS
 &mt LSHIFT Z                 &kp X         &kp C         &kp V                 &kp B                   &kp DEL             &lt 2 TAB      &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
 &mt LEFT_CONTROL LANGUAGE_2  &kp LEFT_ALT  &kp LEFT_WIN  &mt LEFT_SHIFT LANG2  &mt LEFT_CONTROL SPACE  &lt 9 LANGUAGE_1    &kp BACKSPACE  &lt 3 ENTER                             &mt RIGHT_ALT LANGUAGE_1
             >;
@@ -354,10 +354,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &mkp MB4  &mkp MB5  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans     &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &kp RC(C)  &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1   &mkp MB4  &mkp MB5  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                 &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
