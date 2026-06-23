@@ -27,7 +27,7 @@ layers:
   - C
   - V
   - B
-  - '&mkp MB2'
+  - TAB
   - {t: ESCAPE, h: SYSTEM}
   - N
   - M
@@ -37,9 +37,9 @@ layers:
   - {t: LANGUAGE 2, h: LEFT CONTROL}
   - LEFT ALT
   - LEFT WIN
-  - {t: TAB, h: JIS_MAP}
+  - {t: LANG2, h: LEFT CONTROL}
   - {t: SPACE, h: NUM_JIS}
-  - '&mkp MB1'
+  - {t: LANGUAGE 1, h: JIS_MAP}
   - BACKSPACE
   - {t: ENTER, h: ARROW}
   - {t: LANGUAGE 1, h: RIGHT ALT}
@@ -424,9 +424,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -564,8 +564,6 @@ combos:
   k: {t: Alt+TAB, h: Gesture_L8}
 - p: [19, 20]
   k: {t: LEFT WIN, h: Gesture_L9}
-- p: [17, 29, 18, 19, 31, 10, 21]
-  k: ''
 - p: [0, 1]
   k: ESCAPE
 - p: [13, 14]
