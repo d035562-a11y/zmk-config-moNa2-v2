@@ -284,10 +284,13 @@
         fusion_orbit: fusion_orbit {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHIFT &mkp MB3>
-                , <&macro_pause_for_release>
-                , <&macro_release &kp LSHIFT &mkp MB3>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHIFT &mkp MB3>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LSHIFT &mkp MB3>;
+
             label = "FUSION_ORBIT";
         };
     };
@@ -302,7 +305,7 @@
 &kp Q                        &kp W         &kp E         &kp R                 &kp T                                                      &kp Y        &kp U  &lt 6 I    &kp O    &lt 6 P
 &kp A                        &kp S         &kp D         &kp F                 &kp G                                       &lt 7 ESC      &kp H        &kp J  &kp K      &kp L    &lt 2 MINUS
 &mt LSHIFT Z                 &kp X         &kp C         &kp V                 &kp B                   &kp DEL             &lt 2 TAB      &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt LEFT_CONTROL LANGUAGE_2  &kp LEFT_ALT  &kp LEFT_WIN  &mt LEFT_SHIFT LANG2  &mt LEFT_CONTROL SPACE  &lt 8 LANGUAGE_1    &kp BACKSPACE  &lt 3 ENTER                             &mt RIGHT_ALT LANGUAGE_2
+&mt LEFT_CONTROL LANGUAGE_2  &kp LEFT_ALT  &kp LEFT_WIN  &mt LEFT_SHIFT LANG2  &mt LEFT_CONTROL SPACE  &lt 9 LANGUAGE_1    &kp BACKSPACE  &lt 3 ENTER                             &mt RIGHT_ALT LANGUAGE_2
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -312,10 +315,10 @@
 
         us_defo {
             bindings = <
-&kp Q                        &kp W         &kp E         &kp R            &kp T                                               &kp Y             &kp U  &lt 6 I             &kp O    &lt LY_SCR P
-&kp A                        &kp S         &kp D         &kp F            &kp G                            &kp DELETE         &kp H             &kp J  &kp K               &kp L    &mt RIGHT_CONTROL MINUS
-&mt LSHIFT Z                 &kp X         &kp C         &kp V            &kp B                &mkp MB2    &lt LY_SYS ESCAPE  &kp N             &kp M  &lt LY_MOUSE COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt LEFT_CONTROL LANGUAGE_2  &kp LEFT_ALT  &kp LEFT_WIN  &lt LY_US_M TAB  &lt LY_NUM_US SPACE  &mkp MB1    &kp BACKSPACE      &lt LY_ARR ENTER                                      &mt RIGHT_ALT LANGUAGE_1
+&kp Q                        &kp W         &kp E         &kp R                      &kp T                                                      &kp Y             &kp U  &lt 6 I    &kp O    &lt LY_SCR P
+&kp A                        &kp S         &kp D         &kp F                      &kp G                                       &lt 7 ESC      &kp H             &kp J  &kp K      &kp L    &lt 2 MINUS
+&mt LSHIFT Z                 &kp X         &kp C         &kp V                      &kp B                   &kp DELETE          &lt 2 TAB      &kp N             &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt LEFT_CONTROL LANGUAGE_2  &kp LEFT_ALT  &kp LEFT_WIN  &mt LEFT_SHIFT LANGUAGE_2  &mt LEFT_CONTROL SPACE  &lt 8 LANGUAGE_1    &kp BACKSPACE  &lt LY_ARR ENTER                             &mt RIGHT_ALT LANGUAGE_1
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -364,10 +367,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &mkp MB4  &mkp MB3   &mkp MB2   &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans         &trans     &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &mkp MB4  &mkp MB3       &mkp MB2   &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &fusion_orbit  &kp RC(C)  &kp RC(V)
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                      &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
