@@ -302,10 +302,10 @@
 
         default_layer {
             bindings = <
-&kp Q                        &kp W         &kp E         &kp R                 &kp T                                                      &kp Y        &kp U  &lt 6 I    &kp O    &lt 6 P
-&kp A                        &kp S         &kp D         &kp F                 &kp G                                       &lt 7 ESC      &kp H        &kp J  &kp K      &kp L    &lt 2 MINUS
-&mt LSHIFT Z                 &kp X         &kp C         &kp V                 &kp B                   &kp BACKSPACE       &kp BACKSPACE  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt LEFT_CONTROL LANGUAGE_2  &kp LEFT_ALT  &kp LEFT_WIN  &mt LEFT_SHIFT LANG2  &mt LEFT_CONTROL SPACE  &lt 9 LANGUAGE_1    &lt 3 TAB      &lt 2 ENTER                             &mt RIGHT_ALT LANGUAGE_2
+&kp Q                    &kp W         &kp E         &kp R                 &kp T                                                      &kp Y        &kp U  &lt 6 I    &kp O    &lt 6 P
+&kp A                    &kp S         &kp D         &kp F                 &kp G                                       &lt 7 ESC      &kp H        &kp J  &kp K      &kp L    &lt 2 MINUS
+&mt LSHIFT Z             &kp X         &kp C         &kp V                 &kp B                   &lt 3 TAB           &kp DELETE     &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt LEFT_WIN LANGUAGE_2  &kp LEFT_ALT  &kp LEFT_WIN  &mt LEFT_SHIFT LANG2  &mt LEFT_CONTROL SPACE  &lt 9 LANGUAGE_1    &kp BACKSPACE  &lt 2 ENTER                             &mt RIGHT_ALT LANGUAGE_2
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -315,10 +315,10 @@
 
         us_defo {
             bindings = <
-&kp Q                        &kp W         &kp E         &kp R                      &kp T                                                  &kp Y        &kp U  &lt 6 I    &kp O    &lt LY_SCR P
-&kp A                        &kp S         &kp D         &kp F                      &kp G                                       &lt 7 ESC  &kp H        &kp J  &kp K      &kp L    &lt 2 MINUS
-&mt LSHIFT Z                 &kp X         &kp C         &kp V                      &kp B                   &kp BACKSPACE       &kp BSPC   &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt LEFT_CONTROL LANGUAGE_2  &kp LEFT_ALT  &kp LEFT_WIN  &mt LEFT_SHIFT LANGUAGE_2  &mt LEFT_CONTROL SPACE  &lt 8 LANGUAGE_1    &lt 3 TAB  &lt 2 ENTER                             &mt RIGHT_ALT LANGUAGE_1
+&kp Q                    &kp W         &kp E         &kp R                      &kp T                                                      &kp Y        &kp U  &lt 6 I    &kp O    &lt LY_SCR P
+&kp A                    &kp S         &kp D         &kp F                      &kp G                                       &lt 7 ESC      &kp H        &kp J  &kp K      &kp L    &lt 2 MINUS
+&mt LSHIFT Z             &kp X         &kp C         &kp V                      &kp B                   &lt 3 TAB           &kp DEL        &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt LEFT_WIN LANGUAGE_2  &kp LEFT_ALT  &kp LEFT_WIN  &mt LEFT_SHIFT LANGUAGE_2  &mt LEFT_CONTROL SPACE  &lt 8 LANGUAGE_1    &kp BACKSPACE  &lt 2 ENTER                             &mt RIGHT_ALT LANGUAGE_1
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -341,10 +341,10 @@
 
         NUM_JIS {
             bindings = <
-&kp PAGE_UP   &kp F2    &kp UP_ARROW  &kp F4        &kp MINUS                       &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
-&mkp MB3      &mkp MB2  &mo LY_SCR    &mkp MB1      &kp LS(SEMI)            &trans  &kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp COLON
-&kp NUMBER_0  &kp F7    &kp F8        &kp F11       &trans        &trans    &trans  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0
-&trans        &trans    &trans        &kp NUMBER_0  &trans        &trans    &trans  &kp NUMBER_0                                            &trans
+&kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                    &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
+&kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp COLON            &trans  &kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp COLON
+&kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &trans    &trans  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0
+&trans        &trans        &trans        &kp NUMBER_0  &trans     &trans    &trans  &kp NUMBER_0                                            &trans
             >;
 
             sensor-bindings = <&page_encoder>;
