@@ -8,41 +8,41 @@ layers:
   - T
   - Y
   - U
-  - I
+  - {t: I, h: SCROLL}
   - O
   - {t: P, h: SCROLL}
   - A
   - S
-  - D
+  - {t: D, h: NUM_JIS}
   - F
   - G
-  - DELETE
+  - {t: ESC, h: SYSTEM}
   - H
   - J
   - K
   - L
   - {t: '-', h: RIGHT CONTROL}
-  - {t: Z, h: LSHIFT}
+  - {t: Z, h: LEFT CONTROL}
   - X
   - C
   - V
   - B
-  - TAB
-  - {t: ESCAPE, h: SYSTEM}
+  - {t: TAB, h: LEFT SHIFT}
+  - DELETE
   - N
   - M
-  - {t: ',', h: MOUSE}
+  - ','
   - .
   - {t: /, h: RIGHT SHIFT}
-  - {t: LANGUAGE 2, h: LEFT CONTROL}
+  - {t: LANGUAGE 1, h: LEFT WIN}
   - LEFT ALT
   - LEFT WIN
-  - {t: LANG2, h: LEFT CONTROL}
-  - {t: SPACE, h: NUM_JIS}
+  - {t: LANGUAGE 2, h: LEFT SHIFT}
+  - {t: SPACE, h: LEFT CONTROL}
   - {t: LANGUAGE 1, h: JIS_MAP}
   - BACKSPACE
   - {t: ENTER, h: ARROW}
-  - {t: LANGUAGE 1, h: RIGHT ALT}
+  - {t: LANGUAGE 2, h: RIGHT ALT}
   us_defo:
   - Q
   - W
@@ -51,15 +51,15 @@ layers:
   - T
   - Y
   - U
-  - I
+  - {t: I, h: SCROLL}
   - O
   - {t: P, h: SCROLL}
   - A
   - S
-  - D
+  - {t: D, h: NUM_US}
   - F
   - G
-  - DELETE
+  - {t: ESC, h: SYSTEM}
   - H
   - J
   - K
@@ -70,19 +70,19 @@ layers:
   - C
   - V
   - B
-  - '&mkp MB2'
-  - {t: ESCAPE, h: SYSTEM}
+  - {t: TAB, h: LEFT SHIFT}
+  - DEL
   - N
   - M
-  - {t: ',', h: MOUSE}
+  - ','
   - .
-  - {t: /, h: RIGHT SHIFT}
-  - {t: LANGUAGE 2, h: LEFT CONTROL}
+  - {t: /, h: NUM_US}
+  - {t: LANGUAGE 2, h: LEFT WIN}
   - LEFT ALT
   - LEFT WIN
-  - {t: TAB, h: US_MAP}
-  - {t: SPACE, h: NUM_US}
-  - '&mkp MB1'
+  - {t: LANGUAGE 1, h: LEFT SHIFT}
+  - {t: SPACE, h: LEFT CONTROL}
+  - {t: LANGUAGE 2, h: US_MAP}
   - BACKSPACE
   - {t: ENTER, h: ARROW}
   - {t: LANGUAGE 1, h: RIGHT ALT}
@@ -93,9 +93,9 @@ layers:
   - F4
   - {t: ▽, type: trans}
   - Sft+Gui+LEFT
-  - F2
+  - Sft+Gui+LEFT
   - UP
-  - F4
+  - Sft+Gui+RIGHT
   - Sft+Gui+RIGHT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -130,7 +130,7 @@ layers:
   - {type: held}
   - F12
   NUM_JIS:
-  - PAGE UP
+  - /
   - F2
   - UP ARROW
   - F4
@@ -140,11 +140,11 @@ layers:
   - '8'
   - '9'
   - '-'
-  - '&mkp MB3'
-  - '&mkp MB2'
-  - SCROLL
-  - '&mkp MB1'
-  - Sft+;
+  - Sft+Gui+LEFT ARROW
+  - LEFT
+  - {type: held}
+  - RIGHT
+  - Sft+Gui+RIGHT
   - {t: ▽, type: trans}
   - '*'
   - '4'
@@ -154,7 +154,7 @@ layers:
   - '0'
   - F7
   - F8
-  - F11
+  - '3'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -162,12 +162,12 @@ layers:
   - '1'
   - '2'
   - '3'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '0'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '0'
-  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '0'
@@ -184,9 +184,9 @@ layers:
   - '9'
   - '-'
   - '&mkp MB3'
-  - '&mkp MB2'
-  - SCROLL
-  - '&mkp MB1'
+  - LEFT
+  - {type: held}
+  - RIGHT
   - Sft+;
   - {t: ▽, type: trans}
   - '*'
@@ -205,12 +205,12 @@ layers:
   - '1'
   - '2'
   - '3'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - '0'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '0'
-  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '0'
@@ -246,9 +246,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&mkp MB1'
-  - {t: '&mkp MB4', type: held}
-  - '&mkp MB5'
-  - {t: ▽, type: trans}
+  - Ctl+C
+  - Ctl+V
+  - '&mkp MB4'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -266,9 +266,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -317,7 +317,7 @@ layers:
   - '&macro_d'
   - '&macro_s'
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -329,7 +329,7 @@ layers:
   - '3'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: '&bootloader', type: held}
+  - '&bootloader'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -381,9 +381,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
