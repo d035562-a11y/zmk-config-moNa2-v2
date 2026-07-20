@@ -48,7 +48,7 @@
         /* --- moNa2既存のコンボ（現状維持。参照先レイヤー番号のみ移動に追従） --- */
 
         Gesture_L8 {
-            bindings = <&lt LY_GEST_L8 LA(TAB)>;
+            bindings = <&lt LY_GEST_L8 LS(LG(S))>;
             key-positions = <8 9>;
         };
 
