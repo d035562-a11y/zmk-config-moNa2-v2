@@ -8,24 +8,22 @@
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
-/* --- レイヤー番号の定義（roBaの番号体系に統一。優先度順） ---
- * 注意: devicetreeのレイヤーブロック名（MOUSE、NUM_US等）と文字列が衝突しないよう、
- * マクロ名にはLY_プレフィックスを付けている。
+/* --- レイヤー番号の定義 ---
+ * LY_プレフィックスでdevicetreeのブロック名との衝突を回避
  */
-
-#define LY_DEF      0
-#define LY_US_D     1
-#define LY_ARR      2
-#define LY_NUM      3
-#define LY_NUM_US   4
-#define LY_MOUSE    5
-#define LY_SCR      6
-#define LY_SYS      7
-#define LY_US_M     8
-#define LY_JIS_M    9
-#define LY_GEST_L7  10
-#define LY_GEST_L8  11
-#define LY_GEST_L9  12
+#define LY_DEF       0
+#define LY_US_D      1
+#define LY_ARR_US    2
+#define LY_ARR_JIS   3
+#define LY_NUM_US    4
+#define LY_MOUSE     5
+#define LY_SCR       6
+#define LY_SYS       7
+#define LY_US_M      8
+#define LY_JIS_M     9
+#define LY_GEST_L7   10
+#define LY_GEST_L8   11
+#define LY_GEST_L9   12
 
 &mt {
     flavor = "balanced";
@@ -79,7 +77,6 @@
         };
 
         /* J+K -> LANGUAGE_1(英数): 通常時(MOUSEレイヤー以外) */
-
         combo_lang1 {
             bindings = <&kp LANGUAGE_1>;
             key-positions = <17 18>;
@@ -87,7 +84,6 @@
         };
 
         /* K+L -> LANGUAGE_2(かな): 通常時(MOUSEレイヤー以外) */
-
         combo_lang2 {
             bindings = <&kp LANGUAGE_2>;
             key-positions = <18 19>;
@@ -95,7 +91,6 @@
         };
 
         /* J+K -> LANGUAGE_1 + オートマウス離脱: MOUSEレイヤー時のみ */
-
         combo_lang1_mouse {
             bindings = <&lang1_exit_AML>;
             key-positions = <17 18>;
@@ -103,7 +98,6 @@
         };
 
         /* K+L -> LANGUAGE_2 + オートマウス離脱: MOUSEレイヤー時のみ */
-
         combo_lang2_mouse {
             bindings = <&lang2_exit_AML>;
             key-positions = <18 19>;
@@ -176,7 +170,6 @@
                 <&kp LANGUAGE_1>,
                 <&macro_tap>,
                 <&tog_off LY_MOUSE>;
-
             label = "LANG1_EXIT_AML";
         };
 
@@ -190,7 +183,6 @@
                 <&kp LANGUAGE_2>,
                 <&macro_tap>,
                 <&tog_off LY_MOUSE>;
-
             label = "LANG2_EXIT_AML";
         };
 
@@ -212,7 +204,6 @@
                 <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
                 <&sl LY_MOUSE>;
-
             label = "MKP_EXIT_AML";
         };
 
@@ -314,7 +305,6 @@
             compatible = "zmk,behavior-hold-tap";
             label = "MT_exit_AML_ON_TAP";
             bindings = <&kp>, <&kp_exit_AML>;
-
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
@@ -336,7 +326,6 @@
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&kp LSHIFT &mkp MB3>;
-
             label = "FUSION_ORBIT";
         };
     };
@@ -345,157 +334,138 @@
         compatible = "zmk,keymap";
 
         /* [0] DEFAULT (JIS OS用) */
-
         default_layer {
             bindings = <
-&kp Q                    &kp W         &kp E         &kp R                      &kp T                                                              &kp Y             &kp U  &kp I      &kp O    &lt LY_SCR P
-&kp A                    &lt LY_NUM S  &kp D         &kp F                      &kp G                                              &lt LY_SYS ESC  &kp H             &kp J  &kp K      &kp L    &mt RIGHT_CONTROL MINUS
-&mt LEFT_SHIFT Z         &kp X         &kp C         &kp V                      &kp B                   &mt LEFT_SHIFT TAB         &kp DELETE      &kp N             &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt LEFT_WIN LANGUAGE_1  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT LANGUAGE_2  &mt LEFT_CONTROL SPACE  &lt LY_JIS_M LANGUAGE_1    &kp BACKSPACE   &lt LY_ARR ENTER                             &mt RIGHT_ALT LANGUAGE_2
+&kp Q            &kp W           &kp E  &kp R                    &kp T                                                                            &kp Y  &kp U  &kp I      &kp O    &lt LY_SCR P
+&kp A            &lt LY_ARR_JIS S &kp D  &kp F                   &kp G            &lt LY_SYS ESC  &kp H  &kp J  &kp K                             &kp L  &mt RIGHT_CONTROL MINUS
+&mt LEFT_SHIFT Z &kp X           &kp C  &kp V                    &kp B            &mt LEFT_SHIFT TAB  &kp DELETE  &kp N  &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt LEFT_WIN LANGUAGE_1  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT LANGUAGE_2  &mt LEFT_CONTROL SPACE  &lt LY_JIS_M LANGUAGE_1  &kp BACKSPACE  &lt LY_ARR_JIS ENTER  &mt RIGHT_ALT LANGUAGE_2
             >;
-
             sensor-bindings = <&scroll_up_down>;
         };
 
         /* [1] US_DEFO */
-
         us_defo {
             bindings = <
-&kp Q                    &kp W         &kp E            &kp R                        &kp T                                                          &kp Y             &kp U  &kp I      &kp O    &lt LY_SCR P
-&kp A                    &kp S         &lt LY_NUM_US D  &kp F                        &kp G                                          &lt LY_SYS ESC  &kp H             &kp J  &kp K      &kp L    &mt RIGHT_CONTROL MINUS
-&mt LSHIFT Z             &kp X         &kp C            &kp V                        &kp B                &mt LEFT_SHIFT TAB        &kp DEL         &kp N             &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt LEFT_GUI LANGUAGE_2  &kp LEFT_WIN  &kp LEFT_WIN     &mt LEFT_CONTROL LANGUAGE_2  &lt LY_NUM_US SPACE  &lt LY_US_M LANGUAGE_1    &kp BACKSPACE   &lt LY_ARR ENTER                             &mt RIGHT_ALT LANGUAGE_1
+&kp Q             &kp W  &kp E            &kp R                       &kp T                                                                            &kp Y  &kp U  &kp I   &kp O    &lt LY_SCR P
+&kp A             &kp S  &lt LY_NUM_US D  &kp F                       &kp G            &lt LY_SYS ESC  &kp H  &kp J  &kp K  &kp L  &mt RIGHT_CONTROL MINUS
+&mt LSHIFT Z      &kp X  &kp C            &kp V                       &kp B            &mt LEFT_SHIFT TAB  &kp DEL  &kp N  &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt LEFT_GUI LANGUAGE_2  &kp LEFT_WIN  &kp LEFT_WIN  &mt LEFT_CONTROL LANGUAGE_2  &lt LY_NUM_US SPACE  &lt LY_US_M LANGUAGE_1  &kp BACKSPACE  &lt LY_ARR_US ENTER  &mt RIGHT_ALT LANGUAGE_1
             >;
-
             sensor-bindings = <&scroll_up_down>;
         };
 
-        /* [2] ARROW */
-
-        ARROW {
+        /* [2] ARROW_US (Windows US設定用) */
+        ARROW_US {
             bindings = <
-&kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                        &kp RS(RG(LEFT))  &kp F2    &kp UP    &kp F4     &kp RS(RG(RIGHT))
-&kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                &kp F13  &kp RA(LEFT)      &kp LEFT  &kp DOWN  &kp RIGHT  &trans
-&trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans    &trans   &trans            &kp F7    &trans    &kp F8     &kp F11
-&trans        &trans        &trans        &kp NUMBER_0  &kp NUMBER_0  &trans    &trans   &trans                                           &kp F12
+&kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                           &kp RS(RG(LEFT))  &kp F2    &kp UP    &kp F4     &kp RS(RG(RIGHT))
+&kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS    &kp F13                 &kp RA(LEFT)      &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+&trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans      &trans    &trans         &trans            &kp F7    &trans    &kp F8     &kp F11
+&trans        &trans        &trans        &kp NUMBER_0  &kp NUMBER_0  &trans  &trans         &trans                                           &kp F12
             >;
-
             sensor-bindings = <&scroll_up_down>;
         };
 
-        /* [3] NUM_JIS (USキーボード + Windows JIS設定に対応した記号) */
-
-        NUM_JIS {
+        /* [3] ARROW_JIS (Windows JIS設定用 - ARROW_USと同じ文字が出るよう変換) */
+        ARROW_JIS {
             bindings = <
-&kp SLASH               &kp F2    &kp UP_ARROW  &kp F4        &kp MINUS                            &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
-&kp LS(LG(LEFT_ARROW))  &kp LEFT  &trans        &kp RIGHT     &kp LS(LG(RIGHT))            &trans  &kp LS(SQT)   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SQT
-&kp NUMBER_0            &kp F7    &kp F8        &kp NUMBER_3  &trans             &trans    &trans  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0
-&trans                  &trans    &trans        &kp NUMBER_0  &trans             &trans    &trans  &kp NUMBER_0                                            &trans
+&kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                           &kp RS(RG(LEFT))  &kp F2    &kp UP    &kp F4     &kp RS(RG(RIGHT))
+&kp LS(SQT)   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LS(SEMI)  &kp F13              &kp RA(LEFT)      &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+&trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans    &trans       &trans            &kp F7    &trans    &kp F8     &kp F11
+&trans        &trans        &trans        &kp NUMBER_0  &kp NUMBER_0  &trans    &trans       &trans                                           &kp F12
             >;
-
-            sensor-bindings = <&page_encoder>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         /* [4] NUM_US */
-
         NUM_US {
             bindings = <
-&kp PAGE_UP   &kp F2    &kp UP_ARROW  &kp F4        &kp MINUS                       &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
-&mkp MB3      &kp LEFT  &trans        &kp RIGHT     &kp LS(SEMI)            &trans  &kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
-&kp NUMBER_0  &kp F7    &kp F8        &kp F11       &trans        &trans    &trans  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0
-&trans        &trans    &trans        &kp NUMBER_0  &trans        &trans    &trans  &kp N0                                                  &trans
+&kp PAGE_UP   &kp F2    &kp UP_ARROW  &kp F4        &kp MINUS                         &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
+&mkp MB3      &kp LEFT  &trans        &kp RIGHT     &kp LS(SEMI)  &trans              &kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
+&kp NUMBER_0  &kp F7    &kp F8        &kp F11       &trans        &trans    &trans    &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0
+&trans        &trans    &trans        &kp NUMBER_0  &trans        &trans    &trans    &kp N0                                                  &trans
             >;
-
             sensor-bindings = <&page_encoder>;
         };
 
         /* [5] MOUSE (オートマウスレイヤー・現状維持) */
-
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &mkp MB1  &mkp MB3   &mkp MB2   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &kp RC(C)  &kp RC(V)  &mkp MB4
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                  &trans
+&trans  &trans  &trans  &trans  &trans                  &trans    &trans     &trans     &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB1  &mkp MB3   &mkp MB2   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &mkp MB1   &kp RC(C)  &kp RC(V)  &mkp MB4
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                                     &trans
             >;
-
             sensor-bindings = <&scroll_up_down>;
         };
 
         /* [6] SCROLL */
-
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans
             >;
         };
 
         /* [7] SYSTEM */
-
         SYSTEM {
             bindings = <
-&bt0_jis    &bt1_us         &bt2_us   &bt3_us   &bt4_us                         &trans  &trans  &trans  &trans  &trans
-&trans      &macro_s        &macro_d  &macro_s  &trans             &trans       &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR  &bt BT_CLR_ALL  &kp N2    &kp N3    &trans   &trans    &bootloader  &trans  &trans  &trans  &trans  &trans
-&trans      &trans          &trans    &trans    &trans   &trans    &trans       &trans                          &trans
+&bt0_jis    &bt1_us         &bt2_us  &bt3_us  &bt4_us                             &trans  &trans  &trans  &trans  &trans
+&trans      &macro_s        &macro_d &macro_s &trans   &trans  &trans    &trans    &trans  &trans  &trans
+&bt BT_CLR  &bt BT_CLR_ALL  &kp N2   &kp N3   &trans   &trans  &bootloader  &trans  &trans  &trans  &trans  &trans
+&trans      &trans          &trans   &trans   &trans   &trans  &trans    &trans                              &trans
             >;
         };
 
         /* [8] US_MAP */
-
         US_MAP {
             bindings = <
-&kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                    &kp LS(N6)         &kp LS(N7)     &kp LS(NUMBER_9)  &kp LS(NUMBER_0)   &kp EQUAL
-&kp TILDE   &trans      &trans      &trans      &kp SLASH             &trans  &kp APOSTROPHE     &kp COLON      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LS(MINUS)
-&kp GRAVE   &trans      &trans      &trans      &trans      &trans    &trans  &kp DOUBLE_QUOTES  &kp SEMICOLON  &kp LS(COMMA)     &kp LS(DOT)        &kp LS(SLASH)
-&trans      &trans      &trans      &trans      &trans      &trans    &trans  &trans                                                                 &trans
+&kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                          &kp LS(N6)      &kp LS(N7)      &kp LS(NUMBER_9)  &kp LS(NUMBER_0)  &kp EQUAL
+&kp TILDE   &trans      &trans      &trans      &kp SLASH   &trans  &kp APOSTROPHE  &kp COLON       &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LS(MINUS)
+&kp GRAVE   &trans      &trans      &trans      &trans      &trans  &trans          &kp DOUBLE_QUOTES  &kp SEMICOLON  &kp LS(COMMA)  &kp LS(DOT)  &kp LS(SLASH)
+&trans      &trans      &trans      &trans      &trans      &trans  &trans          &trans                                                          &trans
             >;
         };
 
         /* [9] JIS_MAP (US_MAPと同じ文字が出るようにJIS設定用に変換) */
-
         JIS_MAP {
             bindings = <
-&kp LS(N1)     &kp LBKT  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                    &kp LS(N6)  &kp LS(N7)  &kp LS(N8)     &kp LS(N9)   &kp LS(MINUS)
-&kp LS(EQUAL)  &trans    &trans      &trans      &kp SLASH             &trans  &kp LS(N7)  &kp SQT     &kp RBKT       &kp BSLH     &kp LS(INT1)
-&kp LS(LBKT)   &trans    &trans      &trans      &trans      &trans    &trans  &kp LS(N2)  &kp SEMI    &kp LS(COMMA)  &kp LS(DOT)  &kp LS(SLASH)
-&trans         &trans    &trans      &trans      &trans      &trans    &trans  &trans                                              &trans
+&kp LS(N1)    &kp LBKT      &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                      &kp LS(N6)    &kp LS(N7)    &kp LS(N8)    &kp LS(N9)    &kp LS(MINUS)
+&kp LS(EQUAL) &trans        &trans      &trans      &kp SLASH   &trans  &kp LS(N7)    &kp SQT       &kp RBKT      &kp BSLH      &kp LS(INT1)
+&kp LS(LBKT)  &trans        &trans      &trans      &trans      &trans  &trans        &kp LS(N2)    &kp SEMI      &kp LS(COMMA) &kp LS(DOT)   &kp LS(SLASH)
+&trans        &trans        &trans      &trans      &trans      &trans  &trans        &trans                                                    &trans
             >;
         };
 
         /* [10] Gesture_L7 */
-
         Gesture_L7 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans
             >;
         };
 
         /* [11] Gesture_L8 */
-
         Gesture_L8 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans
             >;
         };
 
         /* [12] Gesture_L9 */
-
         Gesture_L9 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans
             >;
         };
     };
