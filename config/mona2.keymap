@@ -455,14 +455,14 @@
             >;
         };
 
-        /* [9] JIS_MAP (USキーボード + Windows JIS設定での記号入力) */
+        /* [9] JIS_MAP (US_MAPと同じ文字が出るようにJIS設定用に変換) */
 
         JIS_MAP {
             bindings = <
-&kp LS(N1)  &kp LBKT  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                    &kp LS(INT1)  &kp SQT       &kp LS(SQT)   &kp LS(N8)  &kp LS(MINUS)
-&trans      &trans    &trans      &trans      &trans                &trans  &kp LS(N6)    &kp LS(N7)    &kp RBKT      &kp BSLH    &kp LS(INT1)
-&trans      &trans    &trans      &trans      &trans      &trans    &trans  &kp LBKT      &kp LS(SEMI)  &kp LS(SEMI)  &kp SQT     &kp LS(SLASH)
-&trans      &trans    &trans      &trans      &trans      &trans    &trans  &trans                                                &trans
+&kp LS(N1)    &kp LBKT      &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                      &kp LS(N6)    &kp LS(N7)    &kp LS(N8)    &kp LS(N9)    &kp LS(MINUS)
+&kp LS(EQUAL) &trans        &trans      &trans      &kp SLASH   &trans  &kp LS(N7)    &kp SQT       &kp RBKT      &kp BSLH      &kp LS(INT1)
+&kp LS(LBKT)  &trans        &trans      &trans      &trans      &trans  &trans        &kp LS(N2)    &kp SEMI      &kp LS(COMMA) &kp LS(DOT)   &kp LS(SLASH)
+&trans        &trans        &trans      &trans      &trans      &trans  &trans        &trans                                                    &trans
             >;
         };
 
