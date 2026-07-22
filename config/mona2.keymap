@@ -448,7 +448,7 @@
         US_MAP {
             bindings = <
 &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                    &kp LS(N6)         &kp LS(N7)     &kp LS(NUMBER_9)  &kp LS(NUMBER_0)   &kp EQUAL
-&kp TILDE   &trans      &trans      &trans      &kp SLASH             &trans  &kp APOSTROPHE     &kp COLON      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LS(MINUS)
+&kp TILDE   &trans      &macro_s    &macro_d    &kp SLASH             &trans  &kp APOSTROPHE     &kp COLON      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LS(MINUS)
 &kp GRAVE   &trans      &trans      &trans      &trans      &trans    &trans  &kp DOUBLE_QUOTES  &kp SEMICOLON  &kp LS(COMMA)     &kp LS(DOT)        &kp LS(SLASH)
 &trans      &trans      &trans      &trans      &trans      &trans    &trans  &trans                                                                 &trans
             >;
@@ -459,7 +459,7 @@
         JIS_MAP {
             bindings = <
 &kp LS(N1)     &kp LBKT  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                    &kp LS(N6)  &kp LS(N7)  &kp LS(N8)     &kp LS(N9)   &kp LS(MINUS)
-&kp LS(EQUAL)  &trans    &trans      &trans      &kp SLASH             &trans  &kp LS(N7)  &kp SQT     &kp RBKT       &kp BSLH     &kp LS(INT1)
+&kp LS(EQUAL)  &trans    &macro_s    &macro_d    &kp SLASH             &trans  &kp LS(N7)  &kp SQT     &kp RBKT       &kp BSLH     &kp LS(INT1)
 &kp LS(LBKT)   &trans    &trans      &trans      &trans      &trans    &trans  &kp LS(N2)  &kp SEMI    &kp LS(COMMA)  &kp LS(DOT)  &kp LS(SLASH)
 &trans         &trans    &trans      &trans      &trans      &trans    &trans  &trans                                              &trans
             >;
