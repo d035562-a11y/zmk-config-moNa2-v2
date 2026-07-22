@@ -374,10 +374,10 @@
 
         ARROW {
             bindings = <
-&kp SLASH    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                        &kp RS(RG(LEFT))  &kp F2    &kp UP    &kp F4     &kp RS(RG(RIGHT))
-&kp LS(SQT)  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LS(SEMI)            &kp F13  &kp RA(LEFT)      &kp LEFT  &kp DOWN  &kp RIGHT  &trans
-&trans       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans    &trans   &trans            &kp F7    &trans    &kp F8     &kp F11
-&trans       &trans        &trans        &kp NUMBER_0  &trans        &trans    &trans   &trans                                           &kp F12
+&kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                        &kp RS(RG(LEFT))  &kp F2    &kp UP    &kp F4     &kp RS(RG(RIGHT))
+&kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                &kp F13  &kp RA(LEFT)      &kp LEFT  &kp DOWN  &kp RIGHT  &trans
+&trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans    &trans   &trans            &kp F7    &trans    &kp F8     &kp F11
+&trans        &trans        &trans        &kp NUMBER_0  &kp NUMBER_0  &trans    &trans   &trans                                           &kp F12
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -459,10 +459,10 @@
 
         JIS_MAP {
             bindings = <
-&kp LS(N1)    &kp LBKT      &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                      &kp LS(N6)    &kp LS(N7)    &kp LS(N8)    &kp LS(N9)    &kp LS(MINUS)
-&kp LS(EQUAL) &trans        &trans      &trans      &kp SLASH   &trans  &kp LS(N7)    &kp SQT       &kp RBKT      &kp BSLH      &kp LS(INT1)
-&kp LS(LBKT)  &trans        &trans      &trans      &trans      &trans  &trans        &kp LS(N2)    &kp SEMI      &kp LS(COMMA) &kp LS(DOT)   &kp LS(SLASH)
-&trans        &trans        &trans      &trans      &trans      &trans  &trans        &trans                                                    &trans
+&kp LS(N1)     &kp LBKT  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                    &kp LS(N6)  &kp LS(N7)  &kp LS(N8)     &kp LS(N9)   &kp LS(MINUS)
+&kp LS(EQUAL)  &trans    &trans      &trans      &kp SLASH             &trans  &kp LS(N7)  &kp SQT     &kp RBKT       &kp BSLH     &kp LS(INT1)
+&kp LS(LBKT)   &trans    &trans      &trans      &trans      &trans    &trans  &kp LS(N2)  &kp SEMI    &kp LS(COMMA)  &kp LS(DOT)  &kp LS(SLASH)
+&trans         &trans    &trans      &trans      &trans      &trans    &trans  &trans                                              &trans
             >;
         };
 
