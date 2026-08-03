@@ -43,12 +43,12 @@
         compatible = "zmk,combos";
 
         Gesture_L8 {
-            bindings = <&lt LY_GEST_L8 LS(LG(S))>;
+            bindings = <&lt 11 BACKSPACE>;
             key-positions = <8 9>;
         };
 
         Gesture_L9 {
-            bindings = <&lt LY_GEST_L9 LEFT_WIN>;
+            bindings = <&lt 12 LEFT_WIN>;
             key-positions = <19 20>;
         };
 
@@ -152,7 +152,7 @@
             wait-ms = <0>;
             tap-ms = <0>;
             #binding-cells = <0>;
-            bindings = <&tog_off LY_MOUSE>;
+            bindings = <&tog_off 5>;
             label = "exit_AML";
         };
 
@@ -174,7 +174,7 @@
                 <&macro_tap>,
                 <&kp LANGUAGE_1>,
                 <&macro_tap>,
-                <&tog_off LY_MOUSE>;
+                <&tog_off 5>;
 
             label = "LANG1_EXIT_AML";
         };
@@ -188,7 +188,7 @@
                 <&macro_tap>,
                 <&kp LANGUAGE_2>,
                 <&macro_tap>,
-                <&tog_off LY_MOUSE>;
+                <&tog_off 5>;
 
             label = "LANG2_EXIT_AML";
         };
@@ -210,7 +210,7 @@
                 <&macro_release>,
                 <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&sl LY_MOUSE>;
+                <&sl 5>;
 
             label = "MKP_EXIT_AML";
         };
@@ -347,10 +347,10 @@
 
         default_layer {
             bindings = <
-&kp Q                    &kp W         &kp E         &kp R                    &kp T                                                         &kp Y                 &kp U  &kp I      &kp O    &lt LY_SCR P
-&kp A                    &kp S         &kp D         &kp F                    &kp G                                         &lt LY_SYS ESC  &kp H                 &kp J  &kp K      &kp L    &mt RIGHT_CONTROL MINUS
-&kp Z                    &kp X         &kp C         &kp V                    &kp B                   &mt LEFT_SHIFT TAB    &kp DELETE      &kp N                 &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt LEFT_WIN LANGUAGE_1  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT LEFT_ALT  &mt LEFT_CONTROL SPACE  &lt LY_JIS_M TAB      &kp BACKSPACE   &lt LY_ARR_JIS ENTER                             &mt RIGHT_ALT LANGUAGE_2
+&kp Q                    &kp W         &kp E         &kp R                    &kp T                                                        &kp Y        &kp U  &kp I      &kp O    &lt 6 P
+&kp A                    &kp S         &kp D         &lt 14 F                 &kp G                                         &lt 7 ESC      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL MINUS
+&kp Z                    &kp X         &kp C         &kp V                    &kp B                   &mt LEFT_SHIFT TAB    &kp DELETE     &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt LEFT_WIN LANGUAGE_1  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT LEFT_ALT  &mt LEFT_CONTROL SPACE  &lt 9 TAB             &kp BACKSPACE  &lt 3 ENTER                             &mt RIGHT_ALT LANGUAGE_2
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -360,10 +360,10 @@
 
         us_defo {
             bindings = <
-&kp Q                    &kp W         &kp E         &kp R                    &kp T                                                         &kp Y                &kp U  &kp I      &kp O    &lt LY_SCR P
-&kp A                    &kp S         &kp D         &kp F                    &kp G                                         &lt LY_SYS ESC  &kp H                &kp J  &kp K      &kp L    &mt RIGHT_CONTROL MINUS
-&kp Z                    &kp X         &kp C         &kp V                    &kp B                   &mt LEFT_SHIFT TAB    &kp DEL         &kp N                &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt LEFT_GUI LANGUAGE_2  &kp LEFT_WIN  &kp LEFT_WIN  &mt LEFT_SHIFT LEFT_ALT  &mt LEFT_CONTROL SPACE  &lt LY_US_M TAB       &kp BACKSPACE   &lt LY_ARR_US ENTER                             &mt RIGHT_ALT LANGUAGE_1
+&kp Q                    &kp W         &kp E         &kp R                    &kp T                                                        &kp Y        &kp U  &kp I      &kp O    &lt 6 P
+&kp A                    &kp S         &kp D         &lt 4 F                  &kp G                                         &lt 7 ESC      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL MINUS
+&kp Z                    &kp X         &kp C         &kp V                    &kp B                   &mt LEFT_SHIFT TAB    &kp DEL        &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt LEFT_GUI LANGUAGE_2  &kp LEFT_WIN  &kp LEFT_WIN  &mt LEFT_SHIFT LEFT_ALT  &mt LEFT_CONTROL SPACE  &lt 8 TAB             &kp BACKSPACE  &lt 2 ENTER                             &mt RIGHT_ALT LANGUAGE_1
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -496,6 +496,26 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
             >;
+        };
+
+        layer_14 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
+            >;
+        };
+
+        NUMJIS {
+            bindings = <
+&kp PAGE_UP   &kp F2  &trans  &kp F4        &kp MINUS                       &kp SLASH    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
+&mkp MB3      &trans  &trans  &trans        &kp LS(SEMI)            &trans  &kp RS(SQT)  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp RS(SEMICOLON)
+&kp NUMBER_0  &kp F7  &kp F8  &kp F11       &trans        &trans    &trans  &kp PERIOD   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0
+&trans        &trans  &trans  &kp NUMBER_0  &trans        &trans    &trans  &trans                                                 &kp NUMBER_0
+            >;
+
+            sensor-bindings = <&page_encoder>;
         };
     };
 };
