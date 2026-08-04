@@ -401,7 +401,7 @@
             bindings = <
 &kp PAGE_UP   &kp F2  &kp UP_ARROW  &kp F4        &kp MINUS                       &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
 &mkp MB3      &trans  &trans        &trans        &kp LS(SEMI)            &trans  &kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
-&kp NUMBER_0  &kp F7  &kp F8        &kp F11       &trans        &trans    &trans  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0
+&kp NUMBER_0  &kp F7  &kp F8        &kp F11       &trans        &trans    &trans  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
 &trans        &trans  &trans        &kp NUMBER_0  &trans        &trans    &trans  &kp N0                                                  &kp PERIOD
             >;
 
@@ -511,7 +511,7 @@
             bindings = <
 &kp PAGE_UP   &kp F2  &trans  &kp F4        &kp MINUS                       &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
 &mkp MB3      &trans  &trans  &trans        &kp LS(SEMI)            &trans  &kp RS(SQT)   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp RS(SEMICOLON)
-&kp NUMBER_0  &kp F7  &kp F8  &kp F11       &trans        &trans    &trans  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0
+&kp NUMBER_0  &kp F7  &kp F8  &kp F11       &trans        &trans    &trans  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
 &trans        &trans  &trans  &kp NUMBER_0  &trans        &trans    &trans  &kp NUMBER_0                                            &kp PERIOD
             >;
 
