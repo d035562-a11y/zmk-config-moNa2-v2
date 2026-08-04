@@ -338,6 +338,20 @@
 
             label = "FUSION_ORBIT";
         };
+
+        pass: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RIGHT_PARENTHESIS &kp H &kp H &kp Q &kp W &kp N9 &kp H>;
+            label = "NEW_MACRO";
+        };
+
+        admini: admini {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp D &kp M &kp I &kp N &kp I &kp S &kp T &kp R &kp A &kp T &kp O &kp R>;
+            label = "ADMINI";
+        };
     };
 
     keymap {
