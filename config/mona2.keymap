@@ -254,10 +254,10 @@
 
         default_layer {
             bindings = <
-&kp Q                    &kp W         &kp E         &kp R                      &kp T                                              &kp Y        &kp U  &kp I      &kp O    &lt 6 P
-&kp A                    &kp S         &kp D         &lt 14 F                   &kp G                               &lt 7 ESC      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL MINUS
-&mt LEFT_SHIFT Z         &kp X         &kp C         &kp V                      &kp B         &mt LEFT_SHIFT TAB    &kp DELETE     &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt LEFT_WIN LANGUAGE_1  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_CONTROL LEFT_ALT  &lt 14 SPACE  &lt 9 TAB             &kp BACKSPACE  &lt 3 ENTER                             &mt RIGHT_ALT LANGUAGE_2
+&kp Q                    &kp W         &kp E         &kp R                    &kp T                                                        &kp Y        &kp U  &kp I      &kp O    &lt 6 P
+&lt 14 A                 &kp S         &kp D         &kp F                    &kp G                                         &lt 7 ESC      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL MINUS
+&mt LEFT_SHIFT Z         &kp X         &kp C         &kp V                    &kp B                   &mt LEFT_SHIFT TAB    &kp DELETE     &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt LEFT_WIN LANGUAGE_1  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT LEFT_ALT  &mt LEFT_CONTROL SPACE  &lt 9 TAB             &kp BACKSPACE  &lt 3 ENTER                             &mt RIGHT_ALT LANGUAGE_2
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -267,10 +267,10 @@
 
         us_defo {
             bindings = <
-&kp Q                    &kp W         &kp E         &kp R                      &kp T                                             &kp Y        &kp U  &kp I      &kp O    &lt 6 P
-&kp A                    &kp S         &kp D         &lt 4 F                    &kp G                              &lt 7 ESC      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL MINUS
-&mt LEFT_SHIFT Z         &kp X         &kp C         &kp V                      &kp B        &mt LEFT_SHIFT TAB    &kp DEL        &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt LEFT_GUI LANGUAGE_1  &kp LEFT_WIN  &kp LEFT_WIN  &mt LEFT_CONTROL LEFT_ALT  &lt 4 SPACE  &lt 8 TAB             &kp BACKSPACE  &lt 2 ENTER                             &mt RIGHT_ALT LANGUAGE_2
+&kp Q                    &kp W         &kp E         &kp R                    &kp T                                                        &kp Y        &kp U  &kp I      &kp O    &lt 6 P
+&lt 4 A                  &kp S         &kp D         &kp F                    &kp G                                         &lt 7 ESC      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL MINUS
+&mt LEFT_SHIFT Z         &kp X         &kp C         &kp V                    &kp B                   &mt LEFT_SHIFT TAB    &kp DEL        &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt LEFT_GUI LANGUAGE_1  &kp LEFT_WIN  &kp LEFT_WIN  &mt LEFT_SHIFT LEFT_ALT  &mt LEFT_CONTROL SPACE  &lt 8 TAB             &kp BACKSPACE  &lt 2 ENTER                             &mt RIGHT_ALT LANGUAGE_2
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -307,7 +307,7 @@
         NUM_US {
             bindings = <
 &kp PAGE_UP   &kp F2    &kp UP_ARROW  &kp F4        &kp MINUS                       &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
-&mkp MB3      &kp LEFT  &kp DOWN      &kp RIGHT     &kp LS(SEMI)            &trans  &kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
+&trans        &kp LEFT  &kp DOWN      &kp RIGHT     &kp LS(SEMI)            &trans  &kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
 &kp NUMBER_0  &kp F7    &kp F8        &kp F11       &trans        &trans    &trans  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
 &trans        &trans    &trans        &kp NUMBER_0  &trans        &trans    &trans  &kp N0                                                  &kp PERIOD
             >;
@@ -417,7 +417,7 @@
         NUMJIS {
             bindings = <
 &kp PAGE_UP   &kp F2    &kp UP_ARROW  &kp F4        &kp MINUS                       &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
-&mkp MB3      &kp LEFT  &kp DOWN      &kp RIGHT     &kp LS(SEMI)            &trans  &kp RS(SQT)   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp RS(SEMICOLON)
+&trans        &kp LEFT  &kp DOWN      &kp RIGHT     &kp LS(SEMI)            &trans  &kp RS(SQT)   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp RS(SEMICOLON)
 &kp NUMBER_0  &kp F7    &kp F8        &kp F11       &trans        &trans    &trans  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
 &trans        &trans    &trans        &kp NUMBER_0  &trans        &trans    &trans  &kp NUMBER_0                                            &kp PERIOD
             >;
