@@ -254,10 +254,10 @@
 
         default_layer {
             bindings = <
-&kp Q                    &kp W         &kp E         &kp R                    &kp T                                                        &kp Y        &kp U  &kp I      &kp O    &lt 6 P
-&lt 14 A                 &kp S         &kp D         &kp F                    &kp G                                         &lt 7 ESC      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL MINUS
-&mt LEFT_SHIFT Z         &kp X         &kp C         &kp V                    &kp B                   &mt LEFT_SHIFT TAB    &kp DELETE     &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt LEFT_WIN LANGUAGE_1  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT LEFT_ALT  &mt LEFT_CONTROL SPACE  &lt 9 TAB             &kp BACKSPACE  &lt 3 ENTER                             &mt RIGHT_ALT LANGUAGE_2
+&kp Q                    &kp W         &kp E         &kp R                    &kp T                                              &kp Y        &kp U  &kp I      &kp O    &lt 6 P
+&mt LEFT_CONTROL A       &kp S         &kp D         &kp F                    &kp G                               &lt 7 ESC      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL MINUS
+&mt LEFT_SHIFT Z         &kp X         &kp C         &kp V                    &kp B         &mt LEFT_SHIFT TAB    &kp DELETE     &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt LEFT_WIN LANGUAGE_1  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT LEFT_ALT  &lt 14 SPACE  &lt 9 TAB             &kp BACKSPACE  &lt 3 ENTER                             &mt RIGHT_ALT LANGUAGE_2
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -267,10 +267,10 @@
 
         us_defo {
             bindings = <
-&kp Q                    &kp W         &kp E         &kp R                    &kp T                                                        &kp Y        &kp U  &kp I      &kp O    &lt 6 P
-&lt 4 A                  &kp S         &kp D         &kp F                    &kp G                                         &lt 7 ESC      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL MINUS
-&mt LEFT_SHIFT Z         &kp X         &kp C         &kp V                    &kp B                   &mt LEFT_SHIFT TAB    &kp DEL        &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt LEFT_GUI LANGUAGE_1  &kp LEFT_WIN  &kp LEFT_WIN  &mt LEFT_SHIFT LEFT_ALT  &mt LEFT_CONTROL SPACE  &lt 8 TAB             &kp BACKSPACE  &lt 2 ENTER                             &mt RIGHT_ALT LANGUAGE_2
+&kp Q                    &kp W         &kp E         &kp R                    &kp T                                             &kp Y        &kp U  &kp I      &kp O    &lt 6 P
+&mt LEFT_CONTROL A       &kp S         &kp D         &kp F                    &kp G                              &lt 7 ESC      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL MINUS
+&mt LEFT_SHIFT Z         &kp X         &kp C         &kp V                    &kp B        &mt LEFT_SHIFT TAB    &kp DEL        &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt LEFT_GUI LANGUAGE_1  &kp LEFT_WIN  &kp LEFT_WIN  &mt LEFT_SHIFT LEFT_ALT  &lt 4 SPACE  &lt 8 TAB             &kp BACKSPACE  &lt 2 ENTER                             &mt RIGHT_ALT LANGUAGE_2
             >;
 
             sensor-bindings = <&scroll_up_down>;
