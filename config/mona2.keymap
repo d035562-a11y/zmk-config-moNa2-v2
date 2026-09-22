@@ -149,7 +149,7 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&bt BT_SEL 0 &to 0>;
+            bindings = <&bt BT_SEL 0 &to 1>;
             label = "BT0_JIS";
         };
 
@@ -185,7 +185,7 @@
             #binding-cells = <0>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&bt BT_SEL 4 &to 1>;
+            bindings = <&bt BT_SEL 4 &to 0>;
             label = "BT4_US";
         };
     };
