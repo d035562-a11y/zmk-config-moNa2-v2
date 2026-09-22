@@ -43,8 +43,8 @@
         compatible = "zmk,combos";
 
         Gesture_L8 {
-            bindings = <&lt 11 BACKSPACE>;
-            key-positions = <8 9>;
+            bindings = <&kp DELETE>;
+            key-positions = <9 8>;
         };
 
         Gesture_L9 {
@@ -71,7 +71,7 @@
 
         combo_lang1 {
             bindings = <&kp LANGUAGE_1>;
-            key-positions = <12 11>;
+            key-positions = <17 18>;
         };
 
         /* K+L -> LANGUAGE_2(かな): 通常時(MOUSEレイヤー以外) */
@@ -257,7 +257,7 @@
 &kp Q                    &kp W         &kp E         &kp R                    &kp T                                              &kp Y        &kp U  &kp I      &kp O    &lt 6 P
 &mt LEFT_CONTROL A       &kp S         &kp D         &kp F                    &kp G                               &lt 7 ESC      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL MINUS
 &mt LEFT_SHIFT Z         &kp X         &kp C         &kp V                    &kp B         &mt LEFT_SHIFT TAB    &kp DELETE     &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt LEFT_WIN LANGUAGE_1  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT LEFT_ALT  &lt 14 SPACE  &lt 9 TAB             &kp BACKSPACE  &lt 3 ENTER                             &mt RIGHT_ALT LANGUAGE_2
+&mt LEFT_WIN LANGUAGE_2  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT LEFT_ALT  &lt 14 SPACE  &lt 9 TAB             &kp BACKSPACE  &lt 3 ENTER                             &mt RIGHT_ALT LANGUAGE_1
             >;
 
             sensor-bindings = <&scroll_up_down>;
