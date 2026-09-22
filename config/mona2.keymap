@@ -22,9 +22,8 @@
 #define LY_SYS       7
 #define LY_US_M      8
 #define LY_JIS_M     9
-#define LY_GEST_L7   10
-#define LY_GEST_L8   11
-#define LY_GEST_L9   12
+#define LY_GEST_L9   10
+#define LY_NUMJIS    11
 
 &mt {
     flavor = "balanced";
@@ -48,7 +47,7 @@
         };
 
         Gesture_L9 {
-            bindings = <&lt 12 LEFT_WIN>;
+            bindings = <&lt 10 LEFT_WIN>;
             key-positions = <19 20>;
         };
 
@@ -257,7 +256,7 @@
 &kp Q                    &kp W         &kp E         &kp R                      &kp T                                              &kp Y        &kp U  &kp I      &kp O    &lt 6 P
 &kp A                    &kp S         &kp D         &kp F                      &kp G                               &lt 7 ESC      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL MINUS
 &mt LEFT_SHIFT Z         &kp X         &kp C         &kp V                      &kp B         &mt LEFT_SHIFT TAB    &kp DELETE     &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt LEFT_WIN LANGUAGE_2  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_CONTROL LEFT_ALT  &lt 14 SPACE  &lt 9 TAB             &kp BACKSPACE  &lt 3 ENTER                             &mt RIGHT_ALT LANGUAGE_1
+&mt LEFT_WIN LANGUAGE_2  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_CONTROL LEFT_ALT  &lt 11 SPACE  &lt 9 TAB             &kp BACKSPACE  &lt 3 ENTER                             &mt RIGHT_ALT LANGUAGE_1
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -293,10 +292,10 @@
 
         ARROW_JIS {
             bindings = <
-&kp SLASH    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                        &kp RS(RG(LEFT))  &kp F2    &kp UP    &kp F4     &kp RS(RG(RIGHT))
+&kp SLASH    kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                        &kp RS(RG(LEFT))  &kp F2    &kp UP    &kp F4     &kp RS(RG(RIGHT))
 &kp LS(SQT)  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LS(SEMI)            &kp F13  &kp RA(LEFT)      &kp LEFT  &kp DOWN  &kp RIGHT  &trans
 &trans       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans    &trans   &trans            &kp F7    &trans    &kp F8     &kp F11
-&trans       &kp NUMBER_0  &kp NUMBER_0  &kp NUMBER_0  &to 7         &trans    &trans   &trans                                           &kp F12
+&trans       &kp NUMBER_0  &kp NUMBER_0  &kp NUMBER_0  &to 7         &trans    &trans  &trans                                           &kp F12
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -308,14 +307,14 @@
             bindings = <
 &kp PAGE_UP   &kp F2    &kp UP_ARROW  &kp F4        &kp MINUS                       &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
 &trans        &kp LEFT  &kp DOWN      &kp RIGHT     &kp LS(SEMI)            &trans  &kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
-&kp NUMBER_0  &kp F7    &kp F8        &kp F11       &trans        &trans    &trans  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
+&kp NUMBER_0  &kp F7    &kp F8        &kp F11       &kp NUMBER_0     &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
 &trans        &trans    &trans        &kp NUMBER_0  &trans        &trans    &trans  &kp N0                                                  &kp PERIOD
             >;
 
             sensor-bindings = <&page_encoder>;
         };
 
-        /* [5] MOUSE (オートマウスレイヤー・現状維持) */
+        /* [5] MOUSE (オートマウスロイヤー・翗状維�) */
 
         MOUSE {
             bindings = <
@@ -361,40 +360,18 @@
             >;
         };
 
-        /* [9] JIS_MAP (US_MAPと同じ文字が出るようにJIS設定用に変換) */
+        /* [9] JIS_MAP (US_MAPと同じ文字が出るようにJIS設驚用に変換) */
 
         JIS_MAP {
             bindings = <
 &kp LS(N1)     &kp LBKT  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                    &kp LS(N6)  &kp LS(N7)  &kp LS(N8)     &kp LS(N9)   &kp LS(MINUS)
 &kp LS(EQUAL)  &trans    &macro_s    &macro_d    &kp SLASH             &trans  &kp LS(N7)  &kp SQT     &kp RBKT       &kp BSLH     &kp LS(INT1)
 &kp LS(LBKT)   &trans    &trans      &trans      &trans      &trans    &trans  &kp LS(N2)  &kp SEMI    &kp LS(COMMA)  &kp LS(DOT)  &kp LS(SLASH)
-&trans         &trans    &trans      &trans      &trans      &trans    &trans  &trans                                              &trans
+&trans         &trans    trans      &trans      &trans      &trans    &trans  &trans                                              &trans
             >;
         };
 
-        /* [10] Gesture_L7 */
-
-        Gesture_L7 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
-            >;
-        };
-
-        /* [11] Gesture_L8 */
-
-        Gesture_L8 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
-            >;
-        };
-
-        /* [12] Gesture_L9 */
+        /* [10] Gesture_L9 */
 
         Gesture_L9 {
             bindings = <
@@ -405,14 +382,7 @@
             >;
         };
 
-        layer_14 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
-            >;
-        };
+        /* [11] NUMJIS */
 
         NUMJIS {
             bindings = <
