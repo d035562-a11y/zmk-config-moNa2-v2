@@ -254,10 +254,10 @@
 
         default_layer {
             bindings = <
-&kp Q                    &kp W         &kp E         &kp R                    &kp T                                              &kp Y        &kp U  &kp I      &kp O    &lt 6 P
-&mt LEFT_CONTROL A       &kp S         &kp D         &kp F                    &kp G                               &lt 7 ESC      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL MINUS
-&mt LEFT_SHIFT Z         &kp X         &kp C         &kp V                    &kp B         &mt LEFT_SHIFT TAB    &kp DELETE     &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt LEFT_WIN LANGUAGE_2  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT LEFT_ALT  &lt 14 SPACE  &lt 9 TAB             &kp BACKSPACE  &lt 3 ENTER                             &mt RIGHT_ALT LANGUAGE_1
+&kp Q                    &kp W         &kp E         &kp R                      &kp T                                              &kp Y        &kp U  &kp I      &kp O    &lt 6 P
+&kp A                    &kp S         &kp D         &kp F                      &kp G                               &lt 7 ESC      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL MINUS
+&mt LEFT_SHIFT Z         &kp X         &kp C         &kp V                      &kp B         &mt LEFT_SHIFT TAB    &kp DELETE     &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&mt LEFT_WIN LANGUAGE_2  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_CONTROL LEFT_ALT  &lt 14 SPACE  &lt 9 TAB             &kp BACKSPACE  &lt 3 ENTER                             &mt RIGHT_ALT LANGUAGE_1
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -296,7 +296,7 @@
 &kp SLASH    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                        &kp RS(RG(LEFT))  &kp F2    &kp UP    &kp F4     &kp RS(RG(RIGHT))
 &kp LS(SQT)  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LS(SEMI)            &kp F13  &kp RA(LEFT)      &kp LEFT  &kp DOWN  &kp RIGHT  &trans
 &trans       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans    &trans   &trans            &kp F7    &trans    &kp F8     &kp F11
-&trans       &kp NUMBER_0  &kp NUMBER_0  &kp NUMBER_0  &trans        &trans    &trans   &trans                                           &kp F12
+&trans       &kp NUMBER_0  &kp NUMBER_0  &kp NUMBER_0  &to 7         &trans    &trans   &trans                                           &kp F12
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -319,10 +319,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &trans  &mkp MB1  &mkp MB3   &mkp MB2   &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &mkp MB1  &kp RC(C)  &kp RC(V)  &mkp MB4
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans    &mkp MB3  &mkp MB2  &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &trans  &mkp MB1  &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
