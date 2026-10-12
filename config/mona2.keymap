@@ -203,7 +203,6 @@
                 <&kp H>,
                 <&macro_release>,
                 <&kp GLOBE>;
-
             label = "IPAD_HOME";
         };
 
@@ -219,7 +218,6 @@
                 <&kp F>,
                 <&macro_release>,
                 <&kp GLOBE>;
-
             label = "IPAD_FULL";
         };
 
@@ -235,7 +233,6 @@
                 <&kp UP>,
                 <&macro_release>,
                 <&kp GLOBE>;
-
             label = "IPAD_RECENT";
         };
 
@@ -251,7 +248,6 @@
                 <&kp A>,
                 <&macro_release>,
                 <&kp GLOBE>;
-
             label = "IPAD_DOCK";
         };
 
@@ -267,7 +263,6 @@
                 <&kp A>,
                 <&macro_release>,
                 <&kp GLOBE &kp LSHIFT>;
-
             label = "IPAD_APPLIB";
         };
 
@@ -283,7 +278,6 @@
                 <&kp LEFT>,
                 <&macro_release>,
                 <&kp LCTRL &kp GLOBE>;
-
             label = "IPAD_LEFT";
         };
 
@@ -299,7 +293,6 @@
                 <&kp RIGHT>,
                 <&macro_release>,
                 <&kp LCTRL &kp GLOBE>;
-
             label = "IPAD_RIGHT";
         };
     };
@@ -371,7 +364,7 @@
 &kp Q                    &kp W         &kp E         &kp R                      &kp T                                              &kp Y        &kp U  &kp I      &kp O    &lt 7 P
 &kp A                    &kp S         &kp D         &kp F                      &kp G                               &lt 8 ESC      &kp H        &kp J  &kp K      &kp L    &mt RIGHT_CONTROL MINUS
 &mt LEFT_SHIFT Z         &kp X         &kp C         &kp V                      &kp B         &mt LEFT_SHIFT TAB    &kp DELETE     &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&mt LEFT_WIN LANGUAGE_2  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_CONTROL LEFT_ALT  &lt 12 SPACE  &lt 10 TAB            &kp BACKSPACE  &lt 4 ENTER                             &mt RIGHT_ALT LANGUAGE_1
+&mt LEFT_WIN LANGUAGE_2  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_CONTROL LEFT_ALT  &lt 12 SPACE  &lt 10 TAB             &kp BACKSPACE  &lt 4 ENTER                             &mt RIGHT_ALT LANGUAGE_1
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -407,10 +400,10 @@
 
         ARROW_US {
             bindings = <
-&kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                          &kp RS(RG(LEFT))  &kp F2    &kp UP    &kp F4     &kp RS(RG(RIGHT))
-&kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                  &kp F13  &kp LANGUAGE_2    &kp LEFT  &kp DOWN  &kp RIGHT  &kp LANGUAGE_1
-&trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans          &trans    &trans   &trans            &kp F7    &trans    &kp F8     &kp F11
-&trans        &kp NUMBER_0  &kp N0        &kp NUMBER_0  &lt 8 NUMBER_0  &trans    &trans   &trans                                           &kp F12
+&kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                     &kp RS(RG(LEFT))  &kp F2    &kp UP    &kp F4     &kp RS(RG(RIGHT))
+&kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS             &kp F13  &kp LANGUAGE_2    &kp LEFT  &kp DOWN  &kp RIGHT  &kp LANGUAGE_1
+&trans        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans     &trans    &trans   &trans            &kp F7    &trans    &kp F8     &kp F11
+&trans        &kp NUMBER_0  &kp N0        &kp NUMBER_0  &trans     &trans    &trans   &trans                                           &kp F12
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -423,7 +416,7 @@
 &kp SLASH    &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                        &kp RS(RG(LEFT))  &kp F2    &kp UP    &kp F4     &kp RS(RG(RIGHT))
 &kp LS(SQT)  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LS(SEMI)            &kp F13  &kp RA(LEFT)      &kp LEFT  &kp DOWN  &kp RIGHT  &trans
 &trans       &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans    &trans   &trans            &kp F7    &trans    &kp F8     &kp F11
-&trans       &kp NUMBER_0  &kp NUMBER_0  &kp NUMBER_0  &to 8         &trans    &trans   &trans                                           &kp F12
+&trans       &kp NUMBER_0  &kp NUMBER_0  &kp NUMBER_0  &to 8         &trans    &trans  &trans                                           &kp F12
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -433,9 +426,9 @@
 
         NUM_US {
             bindings = <
-&kp PAGE_UP   &kp F2    &kp UP_ARROW  &kp F4        &kp MINUS                       &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
-&trans        &kp LEFT  &kp DOWN      &kp RIGHT     &kp LS(SEMI)            &trans  &kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS
-&kp NUMBER_0  &kp F7    &kp F8        &kp F11       &kp NUMBER_0  &trans    &trans  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
+&kp LS(N1)      &kp LS(N2)      &kp LS(N3)      &kp LS(N4)      &kp LS(N5)      &kp SLASH       &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9    &kp MINUS
+&kp COLON       &kp LS(N7)      &kp LS(N9)      &kp LS(N0)      &kp EQUAL       &trans          &kp ASTERISK    &kp NUMBER_4    &kp NUMBER_5    &kp NUMBER_6    &kp PLUS
+&kp DOUBLE_QUOTES  &kp APOSTROPHE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp ASTERISK    &kp SEMICOLON   &trans          &kp PERIOD      &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3    &kp ENTER
 &trans        &trans    &trans        &kp NUMBER_0  &trans        &trans    &trans  &kp N0                                                  &kp PERIOD
             >;
 
@@ -470,10 +463,10 @@
 
         SYSTEM {
             bindings = <
-&bt0_jis    &bt1_us         &bt2_us   &bt3_us   &bt4_ipad                         &trans  &trans  &trans  &trans  &trans
-&trans      &macro_s        &macro_d  &macro_s  &trans               &trans       &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR  &bt BT_CLR_ALL  &kp N2    &kp N3    &trans     &trans    &bootloader  &trans  &trans  &trans  &trans  &trans
-&trans      &trans          &trans    &trans    &trans     &trans    &trans       &trans                          &trans
+&bt0_jis    &bt1_us         &bt2_us   &bt3_us   &bt4_ipad                       &trans  &trans  &trans  &trans  &trans
+&trans      &macro_s        &macro_d  &macro_s  &trans             &trans       &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR  &bt BT_CLR_ALL  &kp N2    &kp N3    &trans   &trans    &bootloader  &trans  &trans  &trans  &trans  &trans
+&trans      &trans          &trans    &trans    &trans   &trans    &trans       &trans                          &trans
             >;
         };
 
@@ -514,9 +507,9 @@
 
         NUMJIS {
             bindings = <
-&kp PAGE_UP   &kp F2    &kp UP_ARROW  &kp F4        &kp MINUS                       &kp SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS
-&trans        &kp LEFT  &kp DOWN      &kp RIGHT     &kp LS(SEMI)            &trans  &kp RS(SQT)   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp RS(SEMICOLON)
-&kp NUMBER_0  &kp F7    &kp F8        &kp F11       &trans        &trans    &trans  &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ENTER
+&kp LS(N1)      &kp LBKT        &kp LS(N3)      &kp LS(N4)      &kp LS(N5)      &kp SLASH       &kp NUMBER_7    &kp NUMBER_8    &kp NUMBER_9    &kp MINUS
+&kp SQT         &kp LS(N6)      &kp LS(N8)      &kp LS(N9)      &kp LS(MINUS)   &trans          &kp RS(SQT)     &kp NUMBER_4    &kp NUMBER_5    &kp NUMBER_6    &kp RS(SEMICOLON)
+&kp LS(N2)      &kp LS(N7)      &kp RBKT        &kp BSLH        &kp RS(SQT)     &kp SEMI        &trans          &kp PERIOD      &kp NUMBER_1    &kp NUMBER_2    &kp NUMBER_3    &kp ENTER
 &trans        &trans    &trans        &kp NUMBER_0  &trans        &trans    &trans  &kp NUMBER_0                                            &kp PERIOD
             >;
 
@@ -531,10 +524,10 @@
 
         ipad_act {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &kp LG(TAB)    &ipad_recent  &ipad_full    &ipad_dock   &trans
-&trans  &trans  &trans  &trans  &trans            &trans  &ipad_home     &ipad_left    &kp LG(M)     &ipad_right  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LG(SPACE)  &trans        &ipad_applib  &kp LG(W)    &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                                  &trans
+&trans  &trans  &trans  &trans  &trans                    &kp LG(TAB)    &ipad_recent  &ipad_full  &ipad_dock   &trans
+&trans  &trans  &trans  &trans  &trans            &trans  &ipad_home     &ipad_left    &kp LG(M)   &ipad_right  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LG(SPACE)  &trans        &ipad_applib &kp LG(W)   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                                                &trans
             >;
 
             sensor-bindings = <&scroll_up_down>;
