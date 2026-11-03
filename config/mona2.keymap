@@ -455,7 +455,7 @@
         SYSTEM {
             bindings = <
 &bt0_jis    &bt1_us         &bt2_us   &bt3_us   &bt4_ipad                         &trans  &trans  &trans  &trans  &trans
-&trans      &macro_s        &macro_d  &macro_s  &trans               &trans       &trans  &trans  &trans  &trans  &trans
+&ind_bat      &macro_s        &macro_d  &macro_s  &trans               &trans       &trans  &trans  &trans  &trans  &trans
 &bt BT_CLR  &bt BT_CLR_ALL  &kp N2    &kp N3    &trans     &trans    &bootloader  &trans  &trans  &trans  &trans  &trans
 &trans      &trans          &trans    &trans    &trans     &trans    &trans       &trans                          &trans
             >;
