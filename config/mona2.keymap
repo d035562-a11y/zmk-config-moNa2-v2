@@ -400,9 +400,9 @@
 
         ARROW_US {
             bindings = <
-&kp SLASH  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK                      &kp RS(RG(LEFT))  &kp LC(LS(TAB))  &kp UP        &kp LC(TAB)    &kp RS(RG(RIGHT))
-&kp MINUS  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                  &trans  &kp RG(RC(LEFT))  &kp LEFT         &kp DOWN      &kp RIGHT      &kp RG(RC(RIGHT))
-&kp DOT    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans          &trans    &trans  &kp LG(LEFT)      &kp LA(LEFT)     &kp LG(DOWN)  &kp LA(RIGHT)  &kp LG(RIGHT)
+&kp SLASH  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp ASTERISK                      &kp RC(RG(LEFT))  &kp F2  &kp UP        &kp F4    &kp RG(RC(RIGHT))
+&kp MINUS  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                  &trans  &kp LC(LS(TAB))  &kp LEFT         &kp DOWN      &kp RIGHT      &kp LC(TAB)
+&kp DOT    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans          &trans    &trans  &kp LA(LEFT)      &kp F7     &kp LG(DOWN)  &kp F8  &kp LA(RIGHT)
 &trans     &kp NUMBER_0  &kp N0        &kp NUMBER_0  &lt 8 NUMBER_0  &trans    &trans  &trans                                                          &kp LG(LS(S))
             >;
 
@@ -411,9 +411,9 @@
 
         ARROW_JIS {
             bindings = <
-&kp SLASH  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp LS(SQT)                     &kp RC(RG(LEFT))  &kp LC(LS(TAB))  &kp UP        &kp LC(TAB)    &kp RG(RC(RIGHT))
-&kp MINUS  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LS(SEMI)            &trans  &trans            &kp LEFT         &kp DOWN      &kp RIGHT      &trans
-&kp DOT    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans    &trans  &kp LG(LEFT)      &kp LA(LEFT)     &kp LG(DOWN)  &kp LA(RIGHT)  &kp LG(RIGHT)
+&kp SLASH  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp LS(SQT)                     &kp RC(RG(LEFT))  &kp F2  &kp UP        &kp F4    &kp RG(RC(RIGHT))
+&kp MINUS  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LS(SEMI)            &trans  &kp LC(LS(TAB))            &kp LEFT         &kp DOWN      &kp RIGHT      &kp LC(TAB)
+&kp DOT    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans    &trans  &kp LA(LEFT)      &kp F7     &kp LG(DOWN)  &kp F8  &kp LA(RIGHT)
 &trans     &kp NUMBER_0  &kp NUMBER_0  &kp NUMBER_0  &to 8         &trans    &trans  &trans                                                          &kp LG(LS(S))
             >;
 
