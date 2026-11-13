@@ -453,28 +453,28 @@
 
         SYSTEM {
             bindings = <
-&bt0_jis    &bt1_us         &bt2_us   &bt3_us   &bt4_ipad                         &trans  &trans  &trans  &trans  &trans
-&trans      &macro_s        &macro_d  &macro_s  &trans               &trans       &trans  &trans  &trans  &trans  &trans
-&bt BT_CLR  &bt BT_CLR_ALL  &kp N2    &kp N3    &trans     &trans    &bootloader  &trans  &trans  &trans  &trans  &trans
-&trans      &trans          &trans    &trans    &trans     &trans    &trans       &trans                          &trans
+&bt0_jis        &bt1_us         &bt2_us         &bt3_us         &bt4_ipad       &trans          &trans          &trans          &trans          &trans
+&trans          &kp LG(LS(S))   &macro_d        &macro_s        &trans          &trans          &trans          &trans          &trans          &trans          &trans
+&trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans          &trans
+&bootloader     &trans          &trans          &trans          &trans          &trans          &trans          &bt BT_CLR      &bt BT_CLR_ALL
             >;
         };
 
         US_MAP {
             bindings = <
-&kp LG(LS(S))  &kp LG(TAB)   &kp LG(D)  &trans    &kp F12                       &kp LS(N1)  &kp LS(SLASH)  &kp LS(GRAVE)  &kp DQT     &kp LS(N7)
-&kp F2         &kp F4        &kp F7     &kp F8    &kp F5                &trans  &kp LS(N2)  &kp EQUAL      &kp LS(N9)     &kp LS(N0)  &kp COLON
-&kp C_VOL_DN   &kp C_VOL_UP  &macro_s   &macro_d  &kp C_MUTE  &trans    &trans  &kp LS(N4)  &kp BSLH       &kp LBKT       &kp RBKT    &kp LS(N5)
-&trans         &trans        &trans     &trans    &trans      &trans    &trans  &trans                                                &kp LS(N3)
+&kp LS(SLASH)  &kp LS(GRAVE)  &kp LS(N1)     &kp LS(N6)     &trans         &trans         &kp LS(MINUS)  &kp LBKT       &kp RBKT       &kp LS(N5)
+&kp LS(N2)     &kp SQT        &kp DQT        &trans         &kp GRAVE      &trans         &kp LS(N3)     &kp COLON      &kp LS(N9)     &kp LS(N0)     &kp EQUAL
+&trans         &kp LS(N8)     &kp LS(N4)     &kp LS(BSLH)   &kp BSLH       &trans         &trans         &kp LS(N7)     &kp LS(EQUAL)  &kp LS(COMMA)  &kp LS(DOT)    &trans
+&trans         &trans         &trans         &trans         &trans         &trans         &trans         &kp C_VOL_DN   &kp C_VOL_UP
             >;
         };
 
         JIS_MAP {
             bindings = <
-&kp LG(LS(S))  &kp LG(TAB)   &kp LG(D)  &trans    &kp F12                       &kp LS(N1)  &kp LS(SLASH)  &kp LS(EQUAL)  &kp LS(N2)  &kp LS(N6)
-&kp F2         &kp F4        &kp F7     &kp F8    &kp F5                &trans  &kp LBKT    &kp LS(MINUS)  &kp LS(N8)     &kp LS(N9)  &kp SQT
-&kp C_VOL_DN   &kp C_VOL_UP  &macro_s   &macro_d  &kp C_MUTE  &trans    &trans  &kp LS(N4)  &kp INT1       &kp RBKT       &kp BSLH    &kp LS(N5)
-&trans         &trans        &trans     &trans    &trans      &trans    &trans  &trans                                                &kp LS(N3)
+&kp LS(SLASH)  &kp LS(EQUAL)  &kp LS(N1)     &kp EQUAL      &trans         &trans         &kp LS(INT1)   &kp RBKT       &kp BSLH       &kp LS(N5)
+&kp LBKT       &kp LS(N7)     &kp LS(N2)     &trans         &kp LS(LBKT)   &trans         &kp LS(N3)     &kp SQT        &kp LS(N8)     &kp LS(N9)     &kp LS(MINUS)
+&trans         &kp LS(SQT)    &kp LS(N4)     &kp LS(INT3)   &kp INT1       &trans         &trans         &kp LS(N6)     &kp LS(SEMI)   &kp LS(COMMA)  &kp LS(DOT)    &trans
+&trans         &trans         &trans         &trans         &trans         &trans         &trans         &kp C_VOL_DN   &kp C_VOL_UP
             >;
         };
 
