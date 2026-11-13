@@ -413,7 +413,7 @@
 &zero3     &kp NUMBER_0  &kp N0        &kp NUMBER_0  &kp N0        &lt 8 TAB    &trans  &trans                                               &kp LG(LS(S))
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp K_VOLUME_UP K_VOLUME_DOWN>;
         };
 
         ARROW_JIS {
@@ -460,10 +460,10 @@
 
         SYSTEM {
             bindings = <
-&bt0_jis     &bt1_us        &bt2_us   &bt3_us   &bt4_ipad                    &trans      &trans  &trans  &trans  &trans
-&trans       &kp LG(LS(S))  &macro_d  &macro_s  &trans               &trans  &trans      &trans  &trans  &trans  &trans
-&trans       &trans         &trans    &trans    &trans     &trans    &trans  &trans      &trans  &trans  &trans  &trans
-&bootloader  &trans         &trans    &trans    &trans     &trans    &trans  &bt BT_CLR                          &bt BT_CLR_ALL
+&bt0_jis     &bt1_us        &bt2_us   &bt3_us   &bt4_ipad                    &trans  &trans  &trans  &trans  &trans
+&trans       &kp LG(LS(S))  &macro_d  &macro_s  &trans               &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans         &trans    &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&bootloader  &bt BT_CLR     &trans    &trans    &trans     &trans    &trans  &trans                          &bt BT_CLR_ALL
             >;
         };
 
